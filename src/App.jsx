@@ -54,7 +54,7 @@ function App() {
 
   const obtainNewToken = async () => {
     try {
-      const response = await fetch('/refresh_token', {
+      const response = await fetch('http://localhost:8888/refresh_token', {
         method: 'POST', // or 'GET' depending on your server implementation
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ function App() {
         <>
           <div id="login">
             <h1>This is an example of the Authorization Code flow</h1>
-            <a href="/login" className="btn btn-primary">
+            <a href="http://localhost:8888/login" className="btn btn-primary">
               Log in with Spotify
             </a>
           </div>
